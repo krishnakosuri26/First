@@ -1,4 +1,5 @@
-import { Component} from '@angular/core';
+import { Component, OnInit, inject} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,6 +7,15 @@ import { Component} from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 
-export class SidebarComponent {
+export class SidebarComponent implements OnInit{
+
+  activeRout: ActivatedRoute = inject(ActivatedRoute);
+
+  routeNumber: number = 0;
+
+  ngOnInit(){
+   this.activeRout.snapshot.paramMap.get('id');
+   console.log(this.activeRout);
+  }
 
   }

@@ -11,6 +11,4 @@ export class AppComponent {
   title = 'first';
 
   
-
-
 }

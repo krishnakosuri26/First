@@ -12,7 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
 {path: 'header', component: HeaderComponent},
 {path: 'sidebar', component: SidebarComponent},
-{path: 'menu', component: MenuComponent},
+{path: 'header/menu/:id', component: MenuComponent},
 {path: 'footer', component: FooterComponent}
 ]
 
